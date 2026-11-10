@@ -1,1 +1,6 @@
-* @gomods/maintainers
+# Managed by github-enterprise-terraform: changes made here are overwritten on the next apply.
+# How to change it: https://github.com/pantheon-systems/github-enterprise-terraform/blob/main/modules/github-repo/README.md#managed-files
+# Questions: #ask-delivery-engineering on Slack
+
+* @pantheon-systems/delivery-engineering
+/.github/CODEOWNERS @pantheon-systems/delivery-engineering
