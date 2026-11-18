@@ -42,16 +42,13 @@ jobs:
       - name: Compute next version (conventional commits)
         id: tag
         if: github.event_name == 'workflow_dispatch'
-        uses: ietf-tools/semver-action@46feaa27e7375da0e3d602721e9fb9573598b880 # v1.12.0
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
-          minorList: feat
-          patchList: fix, perf
-          maxTagsToFetch: 50
-          skipInvalidTags: true
-          noNewCommitBehavior: silent
-          noVersionBumpBehavior: silent
+        shell: bash
+        # No third-party action: the bump logic lives in scripts/next_version.sh.
+        # Prints nothing when there is nothing to release.
+        run: |
+          set -euo pipefail
+          next="$(bash scripts/next_version.sh)"
+          echo "next=${next}" >> "$GITHUB_OUTPUT"
 
       - name: Create and push tag
         if: github.event_name == 'workflow_dispatch' && !inputs.dry_run && steps.tag.outputs.next != ''
