@@ -33,7 +33,7 @@ require (
 	github.com/prometheus/client_golang v1.25.0
 	github.com/prometheus/client_model v0.6.3
 	github.com/prometheus/otlptranslator v1.0.0
-	github.com/redis/go-redis/v9 v9.23.0
+	github.com/redis/go-redis/v9 v9.24.0
 	github.com/spf13/afero v1.15.0
 	github.com/stretchr/testify v1.12.1
 	github.com/technosophos/moniker v0.0.0-20210218184952-3ea787d3943b
@@ -161,7 +161,7 @@ require (
 	go.yaml.in/yaml/v3 v3.0.6 // indirect
 	golang.org/x/crypto v0.58.0 // indirect
 	golang.org/x/net v0.62.0 // indirect
-	golang.org/x/sys v0.49.0 // indirect
+	golang.org/x/sys v0.50.0 // indirect
 	golang.org/x/text v0.43.0 // indirect
 	golang.org/x/time v0.16.0 // indirect
 	google.golang.org/genproto v0.0.0-20261012220534-4341edf3f941 // indirect
